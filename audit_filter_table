@@ -605,6 +605,9 @@ auditfilter platform_app usb_device:dir read;
 # http://mobilerndhub.sec.samsung.net/its/browse/SEANDROID-1964
 auditfilter crash_dump logd:process ptrace;
 
+# http://mobilerndhub.sec.samsung.net/its/browse/SEANDROID-1989
+auditfilter freecessmonitor shell:fd use;
+
 # http://mobilerndhub.sec.samsung.net/its/browse/SEANDROID-1834
 auditfilter netd untrusted_app:fifo_file write;
 
@@ -636,4 +639,7 @@ auditfilter platform_app spu_file:dir read; comm="ndroid.spay:web"
 
 # http://mobilerndhub.sec.samsung.net/its/browse/SEANDROID-2308
 auditfilter cp_vername mmb_device:chr_file getattr;
+
+# https://mobilerndhub.sec.samsung.net/its/browse/SEANDROID-3165
+auditfilter hal_neuralnetworks_default default_prop:file map;
 
